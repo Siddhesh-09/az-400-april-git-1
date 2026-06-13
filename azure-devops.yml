@@ -10,7 +10,7 @@ steps:
 - script: mvn test
   displayName: 'Run Maven Tests'
 
-- script: mvn versions:set -DnewVersion=1.1.$(Build.BuildId)-SNAPSHOT
+- script: mvn versions:set -DnewVersion=1.1.$(Build.Timestamp)-SNAPSHOT
   displayName: 'Set dynamic version'
 
 - script: mvn package
